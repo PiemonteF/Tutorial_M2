@@ -1,22 +1,38 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>ETAPA 3</title>
-	<link rel="stylesheet" href="style.css" />	
-	<script src="script.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ETAPA 3</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="script.js"></script>
+    </head>
 
-</head>
-<body>
-	<div id="main">
-		<h1>ETAPA 3</h1>
-		Introdução a Javascript
-		<div id="calc" class="sections">
-			<h3>PARTE 1 - Cálculos</h3>
-			Cálculos realizados e respectivos resultados obtidos:
-		</div>
-		<button onclick="CalcAddAndShow(10, 50)" class="button-calc">Calcular 10 + 50</button>
-	</div>
-</body>
+    <body>
+        <div id="main">
+            <h1>ETAPA 3</h1>
+            Introdução a javascript
+            <div id="calc" class="selections">
+                <h3>Fazendo alguns cálculos</h3>
+                Cálculos realizados e respectivos resultados obtidos:
+            </div>
+            <button onclick="calcula(10,50)" class="button-calc">Calcular 10 + 50</button>
+            <div id="saida"></div>
+            <h1>Calculadora</h1>
+            <div>
+                <h3>Escolha os número e a operação</h3>
+                <div id="calculadora">
+                    <label for="pnumero">Primerio Número</label>
+                    <input type="text" name="pnumero" id="pnumero" value="">
+                    <label for="operacao">operação</label>
+                    <input type="text" name="operacao" id="operacao" value="">
+                    <label for="snumero">Segundo Número</label>
+                    <input type="text" name="snumero" id="snumero" value="">
+                </div>
+                <button onclick="operacao();" id="calcular">Calcular</button>
+                <div id="resultado"></div>
+            </div>
+        </div>
+    </body>
 </html>
