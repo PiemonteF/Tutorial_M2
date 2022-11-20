@@ -16,6 +16,7 @@
             <br>
             DESCRIÇÃO: <input type="text" id="descricao" name="descricao" value="" required>
             <br>
+            <input type="hidden" id="id_usuario" name="id_usuario" value="">
             <input type="submit" value="INSERIR">
         </form>  
         
@@ -23,6 +24,7 @@
             let url = new URL(window.location.href);
             let params = url.searchParams;
             url = '/atualizarformacao?id_usuario='+url.searchParams.get("id_usuario");
+
     
             fetch(url)
             .then((response) => {
@@ -30,6 +32,8 @@
             })
             .then((data) => {
                 let experiencias = data;
+
+                console.log(data);
     
                 experiencias.map(function(FORMACAO) {
                     document.getElementById('id_usuario').value = FORMACAO.id_usuario;

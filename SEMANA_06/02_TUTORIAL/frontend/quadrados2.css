@@ -1,0 +1,42 @@
+section{
+    display: flex;
+    flex-direction: row;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    border: purple dashed 2px;
+    position: relative;
+}
+
+#a{
+    left: 0;
+    top: 0;
+    width: 500px;
+    height: 500px;
+}
+
+#b{
+    background-color: red;
+    left: 50px;
+    top: 50px;
+    width: 500px;
+    height: 500px;
+}
+
+#c{
+    background-color: magenta;
+    right: 0;
+    top: 0;
+    width: 500px;
+    height: 500px;
+}
+
+#d{
+    background-color: yellow;
+    right: 50px;
+    top: 50px;
+    width: 500px;
+    height: 500px;
+}

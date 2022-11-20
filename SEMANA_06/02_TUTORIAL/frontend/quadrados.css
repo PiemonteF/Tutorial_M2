@@ -1,0 +1,35 @@
+section{
+    display: flex;
+    flex-direction: row;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    border: purple dashed 2px;
+    position: absolute;
+}
+
+#a{
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#b{
+    background-color: red;
+    left: 50px;
+    top: 50px;
+}
+
+#c{
+    background-color: magenta;
+    right: 0;
+    top: 0;
+}
+
+#d{
+    background-color: yellow;
+    right: 50px;
+    top: 50px;
+}

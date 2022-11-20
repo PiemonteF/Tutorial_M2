@@ -61,7 +61,7 @@ app.post('/atualizarformacao', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-	sql = "UPDATE formacao SET curso='" + req.body.curso + "', data_inicio = '" + req.body.data_init + "' , data_fim ='" + req.body.data_fim + "', descricao = '" + req.body.descricao +"'";
+	sql = "UPDATE formacao SET curso='" + req.body.curso + "', data_inicio = '" + req.body.data_init + "' , data_fim='" + req.body.data_fim + "', descricao = '" + req.body.descricao +  "'  WHERE id_usuario='" + req.body.id_usuario + "'";
 	console.log(sql);
 	
 	db.run(sql, [],  err => {
