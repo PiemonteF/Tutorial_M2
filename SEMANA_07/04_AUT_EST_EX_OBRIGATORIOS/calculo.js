@@ -62,10 +62,10 @@ function tabuada(){
 
 function doPi(){
     numero = parseInt(document.getElementById("number").value);
-    luiz = Math.ceil(numero/3)
+    a = Math.ceil(numero/3)
     stringPi = ""
     
-    for (let i = 0; i <= luiz; i++){
+    for (let i = 0; i <= a; i++){
         stringPi += (3*i+1) + "-" + (3*i+2) + "-" + (3*i+3) + "PI";
     }
  
