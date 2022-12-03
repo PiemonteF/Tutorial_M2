@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="calculo.js"></script>
+    <title> Reforma</title>
+</head>
+
+<body>
+    <div class="div-mae">
+        <form>
+            <div class="cabecalho">
+                <h1>Reforma</h1>
+            </div>
+            
+            <h3>Insira a altura e largura da parede em cm:</h3><input id="alturaParede"> <input id="larguraParede">
+
+            <h3>Insira a altura e largura do azulejo em cm:</h3><input id="alturaAzuleijo"> <input  id="larguraAzuleijo">
+            <br><br>
+
+            <div class="resultadoSobra">
+                Resultado:<p id="resultadoSobra"></p>
+                
+            </div>
+
+            <input type="button" name="botao" value="Total de azulejos necessários sem a sobra" onclick="calcularReformaAzuleijos()"></input>
+            
+            <div class="resultadoSobra">
+                Resultado: <p id="resultadoSemSobra"></p>
+            </div>
+
+            <input type="button" name="botao" value="Total de azulejos necessários com a sobra" onclick="calcularReformaAzuleijosSobra()"></input>
+
+        </form>
+    </div>
+</body>
+</html>

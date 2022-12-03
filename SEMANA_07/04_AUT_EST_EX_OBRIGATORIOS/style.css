@@ -1,0 +1,75 @@
+/* HTML reforma */
+@keyframes pisca {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.pisca {
+  -webkit-animation: pisca .75s linear infinite;
+  -moz-animation: pisca .75s linear infinite;
+  -ms-animation: pisca .75s linear infinite;
+  -o-animation: pisca .75s linear infinite;
+  animation: pisca .75s linear infinite;
+}
+
+.div-mae{
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.caixa-resultado{
+    margin-left: 35%;
+    align-items: center;
+    font-size: 13px;
+    padding: 1%;
+    width: 27%;
+    border: 1px solid blue;
+}
+
+.resultadoSobra{
+    padding: 1%;
+}
+
+/* HTML palindromo */
+.palindromo{
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.resultadoPalindromo{
+    padding: 5%;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.button{
+    justify-content: center;
+    justify-items: center;
+    text-align: center; 
+}
+
+/* HTML tabuada */
+.tabuada{
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+.tabelaTabuada{
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+.brincadeirinha{
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
