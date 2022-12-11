@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicio 1</title>
+</head>
+
+<body>
+    <div class="cabecalho">
+        <h2>Se eu colocar meu dinheiro na bolsa, quanto rende?</h2>
+
+        <h3>Aqui você vai calcular quanto você vai ganhar ou perder caso invista determinado valor</h3>
+
+        <div class="divMae">
+            <p>Siga os seguinte passos para calcular o valor futuro...</p>
+            </div>
+            
+            <div class="borda">
+                <p class="valorP">Valor aplicado:
+                <input type="number" id="valorP"></p>
+
+                <p class="meses">Meses que o dinheiro ficara aplicado: 
+                <input type="number" id="meses"></p>
+
+                <p class="taxa">Taxa mensal:
+                <input type="number" id="taxa"></p>
+            </div>
+
+            <div class="resultadoExercicio1">
+            Com isso você vai lucrar tudo isso aqui: <p id="resultado"></p>
+            </div>
+
+            <input id="botao1" type="button" value="Clique aqui para ver quanto voce ira faturar" onclick="valorFuturo()">
+
+            <p>Siga os seguinte passos para calcular o valor presente...</p>
+            </div>
+            
+            <div class="borda">
+                <p class="valorF">Valor futuro:
+                <input type="number" id="valorF"></p>
+
+                <p class="meses">Meses que o dinheiro ficara aplicado: 
+                <input type="number" id="meses2"></p>
+
+                <p class="taxa">Taxa mensal:
+                <input type="number" id="taxa2"></p>
+            </div>
+
+            <div class="resultadoExercicio1">
+            Pra que isso ocorra, você precisa começar com isso aqui: <p id="resultado2"></p>
+            </div>
+
+            <input id="botao2" type="button" value="Clique aqui para ver quanto você precisa ter para lucrar isso que você quer" onclick="valorPresente()">
+    </div>
+
+</body>
+<script src="calculo.js"></script>
+</html>

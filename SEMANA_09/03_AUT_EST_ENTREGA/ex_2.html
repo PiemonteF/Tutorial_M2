@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicio 2</title>
+</head>
+
+<body>
+    <div class="cabecalho2">
+        <h3>Aqui vamos facilitar a sua vida para calculo de juros compostos '-'</h3>
+
+        <p>Siga os seguintes passos para obter o resultado desejado:</p>
+        <div class="informacoes">
+            Insira o periodo do juros (em meses): <input id="periodo" type="number">
+            
+            Insira o capital inicial: <input id="capitalInicial" type="number">
+            
+            Insira a taxa de juros ao mês: <input id="taxaJuros" type="number">
+        </div>
+    </div>
+
+    <div class="respostaJuros">
+        Quer saber quanto tu vai se enrolar pra pagar? <br><br>
+        Valor do juros sobre o valor sera: <p id="resultadoJuros"></p>
+
+        <input id="button" type="button" value="clique aqui" onclick="jurosSimples()" >
+    </div>
+
+    <p>Sendo assim, você terá um montante para pagar no valor de: </p>
+
+    <div class="montante">
+        <p class="resultadoMontante" id="resultadoMontante"></p> 
+    </div>
+
+</body>
+<script src="calculo.js"></script>
+</html>
