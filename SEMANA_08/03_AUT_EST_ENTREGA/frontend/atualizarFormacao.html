@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ATUALIZAR</title>
+        <script src="postConstructor.js"></script>
+    </head>
+    <body>
+        <form name="form1" method="post" action="formacao/atualizarFormacao">
+            CURSO: <input type="text" id="curso" name="curso" value="" required>
+            <br>
+            DATA INÍCIO: <input type="text" id="data_init" name="data_init" value="" required>
+            <br>
+            DATA FIM: <input type="text" id="data_fim" name="data_fim" value="" required>
+            <br>
+            DESCRIÇÃO: <input type="text" id="descricao" name="descricao" value="" required>
+            <br>
+            <input type="hidden" id="id_usuario" name="id_usuario" value="">
+            <input type="submit" value="INSERIR">
+        </form>  
+        
+        <script>
+            let url = new URL(window.location.href);
+            let params = url.searchParams;
+            url = 'formacao/atualizarFormacao?id_usuario='+url.searchParams.get("id_usuario");
+
+    
+            fetch(url)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let experiencias = data;
+
+                console.log(data);
+    
+                experiencias.map(function(FORMACAO) {
+                    document.getElementById('id_usuario').value = FORMACAO.id_usuario;
+                    document.getElementById('curso').value = FORMACAO.curso;
+                    document.getElementById('data_init').value = FORMACAO.data_inicio;
+                    document.getElementById('data_fim').value = FORMACAO.data_fim;
+                    document.getElementById('descricao').value = FORMACAO.descricao;
+                });
+                alert(response.json());
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+        </script>
+    </body>
+</html>

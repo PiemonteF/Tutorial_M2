@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ATUALIZAR</title>
+        <script src="postConstructor.js"></script>
+    </head>
+    <body>
+        <form name="form_habilidade" method="post" action="habilidade/atualizarHabilidade">
+            HABILIDADE: <input type="text" id="habilidade" name="habilidade" value="" required>
+            <br>
+            NOTA: <input type="text" id="nota" name="nota" value="" required>
+            <br>
+            <input type="hidden" id="id_usuario" name="id_usuario" value="">
+            <input type="submit" value="INSERIR">
+        </form>
+        
+        <script>
+            let url = new URL(window.location.href);
+            let params = url.searchParams;
+            url = 'habilidade/atualizarHabilidade?id_usuario='+url.searchParams.get("id_usuario");
+
+    
+            fetch(url)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let experiencias = data;
+
+                console.log(data);
+    
+                experiencias.map(function(HABILIDADE) {
+                    document.getElementById('habilidade').value = HABILIDADE.habilidade;
+                    document.getElementById('nota').value = HABILIDADE.nota;
+                    document.getElementById('id_usuario').value = HABILIDADE.id_usuario;
+                });
+                alert(response.json());
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+        </script>
+    </body>
+</html>
